@@ -1,0 +1,46 @@
+:root {
+  --speed: infinite;
+}
+.container {
+  width: 1000px;
+  height: 300px;
+  padding: 20px;
+  background-color: darkgoldenrod;
+  margin: 5px auto;
+}
+.slot {
+  width: 250px;
+  height: 250px;
+  margin: 20px 30px;
+  background-color: rgb(252, 144, 104);
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+}
+.value {
+  font-size: 5rem;
+  animation-name: slide;
+  animation-timing-function: linear;
+  animation-duration: calc(1s / var(--speed));
+  animation-iteration-count: infinite;
+}
+.game {
+  text-align: center;
+  background-color: #c10;
+  color: white;
+  padding: 20px;
+  width: 700px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+#result {
+  font-size: 3rem;
+}
+@keyframes slide {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(350px);
+  }
+}
